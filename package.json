@@ -53,8 +53,10 @@
     "react-dom": "^15.4.1"
   },
   "scripts": {
+    "lint": "eslint src",
     "audit": "nsp check package",
-    "coverage": "npm run test -- --coverage && cat coverage/lcov.info | coveralls && rm -rf ./coverage",
+    "validate": "yarn audit && yarn lint",
+    "coverage": "yarn test -- --coverage && cat coverage/lcov.info | coveralls && rm -rf ./coverage",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
