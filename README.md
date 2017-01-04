@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/ChinaCompare/web-react.svg?branch=add-travis)](https://travis-ci.org/ChinaCompare/web-react)
+[![Coverage Status](https://coveralls.io/repos/github/ChinaCompare/web-react/badge.svg?branch=master)](https://coveralls.io/github/ChinaCompare/web-react?branch=master)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
