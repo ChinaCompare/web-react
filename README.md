@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0bee2e70a98b481485f07ef6090919b8)](https://www.codacy.com/app/ChinaCompare/web-react?utm_source=github.com&utm_medium=referral&utm_content=ChinaCompare/web-react&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/ChinaCompare/web-react.svg?branch=add-travis)](https://travis-ci.org/ChinaCompare/web-react)
 [![Coverage Status](https://coveralls.io/repos/github/ChinaCompare/web-react/badge.svg?branch=master)](https://coveralls.io/github/ChinaCompare/web-react?branch=master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0bee2e70a98b481485f07ef6090919b8)](https://www.codacy.com/app/ChinaCompare/web-react?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ChinaCompare/web-react&amp;utm_campaign=Badge_Grade)
