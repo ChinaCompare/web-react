@@ -6,6 +6,6 @@ cache:
   directories:
     - node_modules
 script:
-  - npm audit
-  - npm coverage
-  - npm run build
+  - yarn audit
+  - yarn coverage
+  - yarn build
