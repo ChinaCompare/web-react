@@ -6,6 +6,7 @@ var InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 var WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 var getClientEnvironment = require('./env');
 var paths = require('./paths');
+var path = require('path');
 
 
 
@@ -62,11 +63,12 @@ module.exports = {
     publicPath: publicPath
   },
   resolve: {
+    root: __dirname,
     // Redefine modules directory (by default node_modules)
     modulesDirectories: [
       'node_modules',
-      './src/components',
-      './src/api'
+      path.resolve(paths.appSrc, './components'),
+      path.resolve(paths.appSrc, './api')
     ],
     // This allows you to set a fallback for where Webpack should look for modules.
     // We read `NODE_PATH` environment variable in `paths.js` and pass paths here.
@@ -82,7 +84,10 @@ module.exports = {
     alias: {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
-      'react-native': 'react-native-web'
+      'react-native': 'react-native-web',
+      actions: path.resolve(paths.appSrc, './actions/actions.js'),
+      reducers: path.resolve(paths.appSrc, './reducers/reducers.js'),
+      configureStore: path.resolve(paths.appSrc, './store/configureStore.js')
     }
   },
 
@@ -170,7 +175,7 @@ module.exports = {
   },
 
   // We use PostCSS for autoprefixing only.
-  postcss: function() {
+  postcss: function () {
     return [
       autoprefixer({
         browsers: [
