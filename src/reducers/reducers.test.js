@@ -18,10 +18,13 @@ describe('Reducers', () => {
       const action = {
         type: act.TOGGLE_TEST
       };
-      const state = false;
-      const res = reducers.testReducer(df(state), df(action));
+      const statetrue = true;
+      const restrue = reducers.testReducer(df(statetrue), df(action));
+      expect(restrue).toBe(!statetrue);
 
-      expect(res).toBe(!state);
+      const statefalse = false;
+      const resfalse = reducers.testReducer(df(statefalse), df(action));
+      expect(resfalse).toBe(!statefalse);
     });
   });
 });
