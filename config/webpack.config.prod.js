@@ -132,9 +132,6 @@ module.exports = {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         include: paths.appSrc,
-        query: {
-          presets: ['react', 'es2015', 'stage-0']
-        },
         exclude: /(node_modules|bower_components)/
       },
       // The notation here is somewhat confusing.

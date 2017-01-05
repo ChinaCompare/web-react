@@ -127,7 +127,6 @@ module.exports = {
         loader: 'babel-loader',
         include: paths.appSrc,
         query: {
-          presets: ['react', 'es2015', 'stage-0'],
           // This is a feature of `babel-loader` for webpack (not Babel itself).
           // It enables caching results in ./node_modules/.cache/babel-loader/
           // directory for faster rebuilds.
