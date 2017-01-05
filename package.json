@@ -102,12 +102,7 @@
     ],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
-    },
-    "modulePaths": [
-      "src/actions",
-      "src/reducers",
-      "src/store"
-    ]
+    }
   },
   "babel": {
     "presets": [
