@@ -13,7 +13,7 @@ module.exports = injectTranslates = () => {
   find.file(/\/locale-[a-z]{2}\.js$/, transfiles, function (files) {
     const listtrans = {};
     files.forEach(function (f) {
-      let file = f.replace(transfiles, '');
+      var file = f.replace(transfiles, '');
       if (file.indexOf(basepath) == 0) {
         const reg = new RegExp(`^${basepath}${path.sep}`, 'i');
         file = `.${path.sep}${file.replace(reg, '')}`;
@@ -56,8 +56,8 @@ const addNewTranslate = function (list, files) {
 };
 const setnewContent = (listfiles) => {
   const content = fs.readFileSync(destfile, 'utf8');
-  let newcontent = [];
-  let start = false;
+  var newcontent = [];
+  var start = false;
   content.split('\n').forEach(function (c) {
     if (!start && c == TAG_START) {
       start = true;
