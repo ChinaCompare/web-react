@@ -1,7 +1,7 @@
-import * as action from './actionslist';
+import * as act from './actionslist';
 
 export const toggleTest = () => {
   return {
-    type: action.TOGGLE_TEST
+    type: act.TOGGLE_TEST
   };
 };
