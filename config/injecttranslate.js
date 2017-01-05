@@ -73,7 +73,7 @@ const setnewContent = (listfiles) => {
   fs.open(destfile, 'w', function (e, id) {
     fs.write(id, newcontent.join('\n'), null, 'utf8', function () {
       fs.close(id, function () {
-        console.log('[?] ' + destfile.split(path.sep).pop() + ' created');
+        chalk.green('[?] ' + destfile.split(path.sep).pop() + ' created');
       });
     });
   });
