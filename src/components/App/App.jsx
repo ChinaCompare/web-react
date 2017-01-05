@@ -6,13 +6,16 @@ import logo from './logo.svg';
 import './App.scss';
 import * as actions from 'actions';
 
+let loop = 1;
+
 class App extends Component {
   toggle() {
     const { dispatch } = this.props;
     dispatch(actions.toggleTest());
     const langs = ['en', 'es', 'ca'];
-    const randlang = langs[Math.floor(Math.random() * langs.length)];
+    const randlang = langs[(loop % langs.length)];
     dispatch(IntlActions.setLocale(randlang));
+    loop++;
   }
 
   render() {
@@ -34,6 +37,8 @@ class App extends Component {
     );
   }
 }
+
+App.loop = 0;
 
 export default Redux.connect((state) => {
   return state;

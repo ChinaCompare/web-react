@@ -78,5 +78,3 @@ const setnewContent = (listfiles) => {
     });
   });
 };
-
-injectTranslates();
