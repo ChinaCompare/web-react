@@ -1,5 +1,7 @@
+import * as action from './actionslist';
+
 export const toggleTest = () => {
   return {
-    type: 'TOGGLE_TEST'
+    type: action.TOGGLE_TEST
   };
 };
