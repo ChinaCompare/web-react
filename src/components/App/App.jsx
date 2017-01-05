@@ -8,7 +8,7 @@ import * as actions from 'actions';
 
 let loop = 1;
 
-class App extends Component {
+export class App extends Component {
   toggle() {
     const { dispatch } = this.props;
     dispatch(actions.toggleTest());
@@ -37,8 +37,6 @@ class App extends Component {
     );
   }
 }
-
-App.loop = 0;
 
 export default Redux.connect((state) => {
   return state;
