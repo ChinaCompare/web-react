@@ -2,7 +2,7 @@ import * as redux from 'redux';
 import thunk from 'redux-thunk';
 import { IntlReducer as Intl } from 'react-redux-multilingual';
 
-import * as reducers from 'reducers';
+import * as reducers from '../reducers/reducers';
 
 export default (initialState = {}) => {
   let mapreducers = {};

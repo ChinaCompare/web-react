@@ -4,7 +4,7 @@ import { withTranslate, IntlActions } from 'react-redux-multilingual';
 
 import logo from './logo.svg';
 import './App.scss';
-import * as actions from 'actions';
+import * as actions from '../../actions/actions';
 
 let loop = 1;
 

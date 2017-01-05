@@ -11,7 +11,7 @@ const transfiles = path.resolve(__dirname, '../src') + path.sep;
 const destfile = path.resolve(__dirname, `../src/${basepath}/translations.js`);
 
 module.exports = injectTranslates = () => {
-  find.file(/\/locale-[a-z]{2}\.js$/, transfiles, function (files) {
+  find.file(/\/locale-[a-z]{2}\.json$/, transfiles, function (files) {
     const listtrans = {};
     files.forEach(function (f) {
       var file = f.replace(transfiles, '');
@@ -21,12 +21,12 @@ module.exports = injectTranslates = () => {
       } else {
         file = `..${path.sep}${file}`;
       }
-      const total = file.replace(/\.js$/, '');
-      const lang = total.split('-')[1];
+      // const total = file.replace(/\.json$/, '');
+      const lang = file.replace(/\.json$/, '').split('-')[1];
       if (!listtrans.hasOwnProperty(lang)) {
         listtrans[lang] = [];
       }
-      listtrans[lang].push(total);
+      listtrans[lang].push(file);
     });
     setnewContent(listtrans);
   });
@@ -39,12 +39,12 @@ const addNewTranslate = function (list, files) {
       list.push(`const trans${key} = merge.all([`);
       files[key].forEach(function (f, i, array) {
         const comma = i === array.length - 1 ? '' : ',';
-        list.push(`  require('${f}').translate${comma}`);
+        list.push(`  require('${f}')${comma}`);
       });
       list.push(']);');
     } else {
       const f = files[key][0];
-      list.push(`const trans${key} = require('${f}').translate;`);
+      list.push(`const trans${key} = require('${f}');`);
     }
   });
   list.push(`const ${VARNAME} = {`);
@@ -74,7 +74,7 @@ const setnewContent = (listfiles) => {
   fs.open(destfile, 'w', function (e, id) {
     fs.write(id, newcontent.join('\n'), null, 'utf8', function () {
       fs.close(id, function () {
-        chalk.green('[?] ' + destfile.split(path.sep).pop() + ' created');
+        console.log(chalk.green('[?] ' + destfile.split(path.sep).pop() + ' created'));
       });
     });
   });

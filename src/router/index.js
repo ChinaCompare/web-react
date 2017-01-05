@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Router, IndexRoute, hashHistory } from 'react-router';
 
-import App from 'App/App';
+import App from '../components/App/App';
 
 export default (
   <Router history={hashHistory}>
