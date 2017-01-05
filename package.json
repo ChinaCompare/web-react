@@ -18,6 +18,7 @@
     "coveralls": "^2.11.15",
     "cross-spawn": "^5.0.1",
     "css-loader": "^0.26.1",
+    "deepmerge": "^1.3.1",
     "detect-port": "^1.0.7",
     "dotenv": "^2.0.0",
     "eslint": "^3.12.2",
@@ -30,6 +31,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "filesize": "^3.3.0",
+    "find": "^0.2.7",
     "fs-extra": "^1.0.0",
     "gzip-size": "^3.0.0",
     "html-webpack-plugin": "^2.26.0",
@@ -58,6 +60,7 @@
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^5.0.1",
+    "react-redux-multilingual": "^1.0.2",
     "react-router": "^3.0.0",
     "redux": "^3.6.0",
     "redux-thunk": "^2.1.0"

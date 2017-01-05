@@ -8,6 +8,9 @@ var url = require('url');
 var paths = require('./paths');
 var getClientEnvironment = require('./env');
 var path = require('path');
+var injectTranslates = require('./injecttranslate');
+
+injectTranslates();
 
 function ensureSlash(path, needsSlash) {
   var hasSlash = path.endsWith('/');
