@@ -1,6 +1,7 @@
 var path = require('path');
 var find = require('find');
 var fs = require('fs');
+var chalk = require('chalk');
 
 const TAG_START = '// translate:start';
 const TAG_END = '// translate:end';
