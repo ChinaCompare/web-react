@@ -1,5 +1,5 @@
-import expect from "expect";
-import configure from "./configureStore";
+import expect from 'expect';
+import configure from './configureStore';
 
 describe('ConfigureStore', () => {
   it('should load configureStore', () => {
