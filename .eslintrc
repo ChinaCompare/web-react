@@ -35,7 +35,7 @@
       "always"
     ],
     "no-console": [
-      2
+      1
     ],
     "no-constant-condition": [
       2
@@ -441,7 +441,10 @@
     ],
     "indent": [
       2,
-      2
+      2,
+      {
+        "SwitchCase": 1
+      }
     ],
     "jsx-quotes": [
       2,
