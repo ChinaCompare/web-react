@@ -6,6 +6,8 @@ cache:
   directories:
     - node_modules
 script:
+  - node node_modules/node-sass/scripts/install.js
+  - npm rebuild node-sass
   - yarn validate
   - yarn coverage
   - yarn build
