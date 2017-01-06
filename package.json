@@ -83,7 +83,8 @@
     "coverage": "yarn test -- --coverage && cat coverage/lcov.info | coveralls && rm -rf ./coverage",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/tester.js --env=jsdom"
+    "test": "node scripts/tester.js --env=jsdom",
+    "fixsass": "node node_modules/node-sass/scripts/install.js && npm rebuild node-sass"
   },
   "jest": {
     "collectCoverageFrom": [
