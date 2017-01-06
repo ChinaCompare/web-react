@@ -1,9 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+import { Provider } from 'react-redux';
+import { IntlProvider, IntlActions } from 'react-redux-multilingual';
 
-ReactDOM.render(
-  <App />,
+import configure from './store/configureStore';
+import './index.css';
+import router from './router/';
+import translations from './i18n/translations';
+
+const store = configure();
+const DEFAULT_LANGUAGE = 'en';
+
+store.dispatch(IntlActions.setLocale(DEFAULT_LANGUAGE));
+export default ReactDOM.render(
+  <Provider store={store}>
+    <IntlProvider translations={translations}>
+      {router}
+    </IntlProvider>
+  </Provider>,
   document.getElementById('root')
 );
+
