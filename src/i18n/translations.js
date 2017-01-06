@@ -2,9 +2,9 @@
 var merge = require('deepmerge');
 
 // translate:start
-const transca = require('../components/App/translate/locale-ca.json');
-const transen = require('../components/App/translate/locale-en.json');
-const transes = require('../components/App/translate/locale-es.json');
+const transca = require('../pages/Main/translate/locale-ca.json');
+const transen = require('../pages/Main/translate/locale-en.json');
+const transes = require('../pages/Main/translate/locale-es.json');
 const trans = {
   ca: transca,
   en: transen,

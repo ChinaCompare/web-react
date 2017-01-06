@@ -4,7 +4,7 @@ import expect from 'expect';
 import $ from 'jquery';
 import TestUtils from 'react-addons-test-utils';
 
-import { App } from './App';
+import { App } from './Main';
 import * as actions from '../../actions/actions';
 
 describe('App', () => {
