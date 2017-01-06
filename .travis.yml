@@ -6,6 +6,7 @@ cache:
   directories:
     - node_modules
 script:
+  - yarn fixsass
   - yarn validate
   - yarn coverage
   - yarn build
