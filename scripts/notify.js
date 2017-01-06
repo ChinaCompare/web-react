@@ -2,7 +2,7 @@ const child_process = require('child_process');
 
 
 const shouldNotify = () => {
-  return process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID && process.env.TRAVIS_PULL_REQUEST && process.env.TRAVIS_TEST_RESULT && parseInt(process.env.TRAVIS_TEST_RESULT, 10) === 0;
+  return process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID && process.env.TRAVIS_PULL_REQUEST !== 'false' && process.env.TRAVIS_TEST_RESULT && parseInt(process.env.TRAVIS_TEST_RESULT, 10) === 0;
 
 };
 
