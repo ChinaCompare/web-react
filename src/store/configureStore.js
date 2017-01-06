@@ -1,7 +1,7 @@
 import * as redux from 'redux';
 import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
-import {IntlReducer as Intl} from 'react-redux-multilingual';
+import { IntlReducer as Intl } from 'react-redux-multilingual';
 import * as reducers from '../reducers/reducers';
 
 const isProd = function () {
