@@ -10,7 +10,7 @@ const basepath = 'i18n';
 const transfiles = path.resolve(__dirname, '../src') + path.sep;
 const destfile = path.resolve(__dirname, `../src/${basepath}/translations.js`);
 
-module.exports = injectTranslates = () => {
+const injectTranslates = () => {
   find.file(/\/locale-[a-z]{2}\.json$/, transfiles, function (files) {
     const listtrans = {};
     files.forEach(function (f) {
@@ -79,3 +79,9 @@ const setnewContent = (listfiles) => {
     });
   });
 };
+
+if (require.main === module) {
+  injectTranslates();
+} else {
+  module.exports = injectTranslates;
+}
