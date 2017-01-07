@@ -85,7 +85,9 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/tester.js --env=jsdom",
-    "fixsass": "node node_modules/node-sass/scripts/install.js && npm rebuild node-sass"
+    "fixsass": "node node_modules/node-sass/scripts/install.js && npm rebuild node-sass",
+    "buildtheme": "cd semantic && gulp build",
+    "translate": "node config/injecttranslate.js"
   },
   "jest": {
     "collectCoverageFrom": [
