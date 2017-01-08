@@ -34,9 +34,10 @@ const injectTranslates = () => {
 
 const addNewTranslate = function (list, files) {
   const VARNAME = 'trans';
+  const MERGE_FUNCT = 'merge.all';
   Object.keys(files).forEach(function (key) {
     if (files[key].length > 1) {
-      list.push(`const trans${key} = merge.all([`);
+      list.push(`const trans${key} = ${MERGE_FUNCT}([`);
       files[key].forEach(function (f, i, array) {
         const comma = i === array.length - 1 ? '' : ',';
         list.push(`  require('${f}')${comma}`);
