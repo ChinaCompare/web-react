@@ -8,6 +8,8 @@ coverage
 
 # production
 build
+# semantic ui
+semantic/dist/
 
 # misc
 .DS_Store
